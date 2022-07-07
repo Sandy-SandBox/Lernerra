@@ -1,0 +1,68 @@
+/************************************/
+/* NAVIGATION */
+/************************************/
+@use "../abstracts" as *;
+.nav {
+  width: 100vw;
+  height: rem(60);
+  background-color: $clr-white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 15px rgba($clr-primary, 0.2);
+  z-index: 999;
+  display: none;
+  &.active {
+    display: flex;
+  }
+  @include breakpoint-big(medium) {
+    position: initial;
+    width: initial;
+    height: initial;
+    box-shadow: none;
+    display: initial !important;
+    background-color: transparent;
+  }
+  &__list {
+    gap: rem(10);
+    @include breakpoint-big(medium) {
+      gap: rem(20);
+    }
+    @include breakpoint-big(large) {
+      gap: rem(30);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: $fs-s;
+    color: $clr-primary;
+    transition: all $transition-fast;
+    &.active,
+    &:hover {
+      color: $clr-tertiary-dark;
+      font-weight: 500;
+    }
+    @include breakpoint-big(medium) {
+      display: initial;
+      color: $clr-white;
+    }
+  }
+  &__icon {
+    font-size: $fs-m;
+    @include breakpoint-big(medium) {
+      display: none;
+    }
+  }
+  @include breakpoint-big(medium) {
+    &.active &__link {
+      color: $clr-primary;
+    }
+    &.active &__link.active,
+    &.active &__link:hover {
+      color: $clr-tertiary-dark;
+    }
+  }
+}

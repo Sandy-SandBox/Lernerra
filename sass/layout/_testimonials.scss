@@ -1,0 +1,86 @@
+/************************************/
+/* TESTIMONIALS */
+/************************************/
+@use "../abstracts" as *;
+
+.testimonial-section {
+  background-color: $bg-secondary;
+  padding-bottom: rem(95);
+}
+.testimonial {
+  height: rem(222);
+  max-height: fit-content;
+  @include breakpoint-big(large) {
+    height: rem(250);
+  }
+  background-color: $clr-white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: rem(5);
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba($clr-primary, 0.4);
+  transition: all $transition-fast;
+  &__img-wrapper {
+    clip-path: polygon(0 0, 70% 0, 100% 99%, 100% 100%, 0 100%, 0 49%);
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: rem(10) rem(10) rem(5) 0;
+  }
+  &__text {
+    font-size: $fs-s;
+    color: $clr-secondary-light;
+  }
+  &__name {
+    text-align: right;
+    font-size: $fs-s;
+    color: $clr-tertiary-dark;
+    align-self: flex-end;
+    margin-top: rem(5);
+  }
+}
+
+.owl-carousel {
+  position: relative;
+}
+.owl-carousel .owl-stage-outer {
+  /* override */
+  overflow: initial;
+}
+.owl-carousel .owl-item {
+  filter: blur(5px) !important;
+  background-color: var(--clr-tertiary);
+  transition: all $transition-fast !important;
+  border-radius: 10px !important;
+}
+.owl-carousel .owl-item.active {
+  filter: blur(0px) !important;
+}
+.owl-dots {
+  width: max-content;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.owl-dots button.owl-dot {
+  width: rem(25) !important;
+  height: rem(6) !important;
+  background-color: $clr-tertiary-light !important;
+  margin: 0 1rem !important;
+  border-radius: rem(10);
+  transition: all $transition-fast;
+}
+.owl-dots button.owl-dot.active {
+  background-color: $clr-tertiary-dark !important;
+  transform: scaleX(2);
+  transform-origin: center;
+}

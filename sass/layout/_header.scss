@@ -1,0 +1,46 @@
+/************************************/
+/* HEADER STYLE */
+/************************************/
+@use "../abstracts" as *;
+.header {
+  width: 100vw;
+  height: rem(70);
+  background-color: $clr-primary;
+  transition: all $transition-fast;
+  @include breakpoint-big(medium) {
+    height: rem(85);
+  }
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: $bs-light;
+    background-color: rgba($clr-white,0.9);
+    height: rem(60);
+    @include breakpoint-big(medium) {
+      height: rem(85);
+    }
+  }
+  &__logo {
+    margin-left: rem(-30);
+    padding: rem(10) 0;
+  }
+  &__social {
+    gap: rem(15);
+    &-link {
+      font-size: $fs-m;
+      color: $clr-white;
+      transition: all $transition-fast;
+      &:hover {
+        color: $clr-tertiary;
+      }
+    }
+  }
+  &.active &__social-link {
+    color: $clr-primary;
+  }
+}
+.logo__img {
+  width: rem(140);
+}

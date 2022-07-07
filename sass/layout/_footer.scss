@@ -1,0 +1,61 @@
+/************************************/
+/* FOOTER */
+/************************************/
+@use "../abstracts" as *;
+
+.footer {
+  background-color: $clr-primary;
+  padding-bottom: rem(65);
+  @include breakpoint-big(medium) {
+    padding-bottom: 0;
+  }
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: rem(10);
+    background-color: $clr-white;
+    opacity: 0.3;
+  }
+  &__logo {
+    @include flexCenter;
+    margin-bottom: rem(-35);
+    &-img {
+      width: rem(250);
+      height: rem(250);
+    }
+  }
+  &__nav {
+    margin-top: rem(35);
+    &-list {
+      gap: rem(20);
+    }
+    &-item {
+      line-height: 1.3;
+    }
+    &-link {
+      font-size: $fs-d;
+      text-transform: uppercase;
+      color: darken($clr-white, 10);
+      transition: color $transition-fast;
+      &:hover {
+        color: $clr-tertiary-light;
+      }
+    }
+  }
+  .cooyright {
+    background-color: $clr-primary-dark;
+    padding: rem(10);
+    color: darken($clr-white, 5);
+    font-size: $fs-s;
+    text-align: center;
+    margin-top: rem(60);
+    b,
+    a {
+      color: $clr-tertiary-light;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}

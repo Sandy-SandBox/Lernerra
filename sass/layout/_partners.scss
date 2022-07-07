@@ -1,0 +1,37 @@
+/************************************/
+/* PARTNERS */
+/************************************/
+@use "../abstracts" as *;
+
+.partner {
+  &__heading {
+    font-size: $fs-s;
+    letter-spacing: 1px;
+    color: $clr-secondary-lightest;
+    font-weight: 500;
+  }
+  &__wrapper {
+    margin-top: rem(-10);
+  }
+  @include breakpoint-big(medium) {
+    &__wrapper {
+      justify-content: center;
+      gap: rem(50);
+    }
+  }
+
+  &__img {
+    width: rem(60);
+    filter: brightness(0);
+    opacity: 0.5;
+    transition: all $transition-fast;
+    &--3 {
+      width: rem(80);
+    }
+    &:hover {
+      filter: brightness(1);
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}

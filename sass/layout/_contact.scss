@@ -1,0 +1,87 @@
+/************************************/
+/* CONTACT */
+/************************************/
+@use "../abstracts" as *;
+
+.contact-wrapper {
+  grid-gap: rem(40);
+  @include breakpoint-big(huge) {
+    grid-template-columns: 45% 50%;
+    grid-gap: 5%;
+  }
+}
+.contact-details {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: rem(15);
+  align-items: center;
+  @include breakpoint-big(medium) {
+    grid-gap: rem(25);
+  }
+  @include breakpoint-big(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include breakpoint-big(huge) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact-box {
+  background-color: $clr-white;
+  box-shadow: $bs-lightest;
+  padding: rem(20);
+  text-align: center;
+  border-radius: 3px;
+  &__icon {
+    display: inline-block;
+    font-size: $fs-l;
+    color: $clr-primary-light;
+  }
+  &__title {
+    font-size: $fs-d;
+    color: $clr-primary-light;
+    text-transform: capitalize;
+    margin-bottom: rem(10);
+    font-weight: 500;
+  }
+  &__text {
+    font-size: $fs-s;
+    color: $clr-secondary-light;
+  }
+  &__socials {
+    gap: rem(10);
+  }
+  &__link {
+    font-size: $fs-d;
+    color: $clr-secondary-light;
+  }
+}
+
+/****** COMTACT FORM ******/
+.form {
+  grid-gap: rem(20);
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    @include breakpoint-big(medium) {
+      grid-gap: rem(35);
+    }
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    padding: rem(15) 0;
+    font-size: $fs-d;
+    text-transform: capitalize;
+    color: $clr-primary-light;
+    outline: none;
+    border-bottom: 2px dotted $clr-tertiary;
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+    }
+  }
+  textarea.form__input {
+    max-height: rem(160);
+    resize: none;
+  }
+}

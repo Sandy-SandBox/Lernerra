@@ -1,0 +1,47 @@
+/************************************/
+/* SERVICES */
+/************************************/
+@use "../abstracts" as *;
+
+.service-section {
+  background-color: $bg-tertiary;
+}
+.services {
+  gap: rem(40);
+  @include breakpoint-big(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint-big(large) {
+    column-gap: rem(60);
+  }
+}
+.service {
+  position: relative;
+  &::after {
+    content: attr(data-service-count);
+    position: absolute;
+    top: rem(-15);
+    right: 0;
+    font-size: rem(45);
+    color: transparent;
+    -webkit-text-stroke-color: $clr-secondary-light;
+    -webkit-text-stroke-width: 0.5px;
+    letter-spacing: 3px;
+  }
+  &__icon {
+    width: rem(40);
+    height: rem(40);
+    background-color: $clr-tertiary-light;
+    border-radius: 50%;
+    @include flexCenter;
+    font-size: $fs-l;
+    color: $clr-white;
+    margin-bottom: rem(15);
+  }
+  &__title {
+    margin-bottom: rem(5);
+  }
+  &__description {
+    color: $clr-secondary;
+  }
+}

@@ -1,0 +1,34 @@
+/************************************/
+/* ABOUT SECTION */
+/************************************/
+@use "../abstracts" as *;
+
+.about {
+  background-color: $bg-secondary;
+  &__box {
+    row-gap: rem(35);
+    @include breakpoint-big(large) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: rem(50);
+    }
+  }
+  &__text {
+    color: $clr-secondary;
+  }
+}
+.achivement {
+  gap: rem(30);
+  &__box {
+    text-align: center;
+  }
+  &__count {
+    font-size: $fs-l;
+    font-weight: 600;
+    color: $clr-tertiary;
+    line-height: 1;
+  }
+  &__text {
+    font-size: $fs-s;
+    color: $clr-secondary-light;
+  }
+}
