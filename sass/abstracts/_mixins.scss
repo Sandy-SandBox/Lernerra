@@ -1,0 +1,23 @@
+/************************************/
+/* MIXINS */
+/************************************/
+
+/****** Absolute Center ******/
+@mixin absCenter($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+/****** Flex Center ******/
+@mixin flexCenter($direction:row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+/****** Responsive Grid ******/
+@mixin resGrid($size, $gap) {
+  grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+  grid-gap: $gap;
+}

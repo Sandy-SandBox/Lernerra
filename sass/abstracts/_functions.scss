@@ -1,0 +1,13 @@
+/************************************/
+/* FUNCTIONS */
+/************************************/
+@use "sass:math";
+/*** Convert pixels into Rem ***/
+@function rem($pixel) {
+  @return math.div($pixel,10) + rem;
+}
+
+/*** Convert pixels into Em ***/
+@function em($pixel) {
+  @return math.div($pixel,16) + em;
+}

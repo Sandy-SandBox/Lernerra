@@ -1,0 +1,51 @@
+/************************************/
+/* ANIMATIONS */
+/************************************/
+@use "../abstracts" as *;
+/****** Hero Animations ******/
+
+/*** HERO CONTENT ***/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/*** HERO IMAGES ***/
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-115rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(115rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+/****** PRELOADER ANIMATION ******/
+@keyframes out {
+  from {
+    box-shadow: 0 0 0 -5px $clr-white;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

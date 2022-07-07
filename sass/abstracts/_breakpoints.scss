@@ -1,0 +1,26 @@
+/************************************/
+/* MEDIA QUERIES */
+/************************************/
+@use "functions" as f;
+
+/*** Breakpoints Up ***/
+$breakpoints-up: (
+  "medium": f.em(768),
+  "large": f.em(992),
+  "huge": f.em(1200),
+);
+@mixin breakpoint-big($size) {
+  @media (min-width: map-get($breakpoints-up,$size)) {
+    @content;
+  }
+}
+
+/*** Breakpoints Down ***/
+$breakpoints-down: (
+  "small": f.em(325),
+);
+@mixin breakpoint-low($size) {
+  @media (max-width: map-get($breakpoints-down,$size)) {
+    @content;
+  }
+}
