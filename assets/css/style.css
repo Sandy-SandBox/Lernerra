@@ -784,7 +784,7 @@ p {
 }
 @media (min-width: 62em) {
   .services {
-    column-gap: 6rem;
+    column-gap: 8rem;
   }
 }
 
