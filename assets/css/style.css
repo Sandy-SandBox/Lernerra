@@ -1416,7 +1416,7 @@ p {
 }
 
 .popup {
-  width: min(45rem, 90%);
+  width: min(40rem, 90%);
   padding: 3.5rem 2rem 2rem 2rem;
   background-color: hsl(30deg, 16%, 90%);
   position: relative;
