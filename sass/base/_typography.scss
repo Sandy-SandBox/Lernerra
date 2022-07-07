@@ -1,0 +1,69 @@
+/************************************/
+/* TYPOGRAPHY */
+/************************************/
+@use "../abstracts" as *;
+.heading {
+  &--primary {
+    width: 100%;
+    font-size: $fs-xl;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: $clr-white;
+    strong {
+      color: $clr-tertiary;
+    }
+  }
+  &--secondary {
+    font-size: $fs-l;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: $clr-primary;
+    line-height: 1.3;
+  }
+  &--tertiary {
+    @extend .heading--secondary;
+    font-size: calc($fs-l - rem(3));
+    line-height: 1.5;
+  }
+}
+.section-title {
+  text-align: center;
+  margin-bottom: rem(40);
+  position: relative;
+  @include breakpoint-big(medium) {
+    margin-bottom: rem(50);
+  }
+  @include breakpoint-big(large) {
+    margin-bottom: rem(0);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: rem(15);
+    height: rem(15);
+    background-color: $clr-tertiary;
+    border-radius: 50%;
+    top: rem(-30);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    content: attr(data-section);
+    text-transform: uppercase;
+    font-size: rem(50);
+    font-weight: 400;
+    @include absCenter(50%, 50%);
+    color: transparent;
+    -webkit-text-stroke-color: $clr-primary;
+    -webkit-text-stroke-width: 0.5px;
+    letter-spacing: 3px;
+    z-index: -1;
+    opacity: 1;
+  }
+}
+p {
+  font-size: $fs-d;
+  line-height: 1.7;
+}
