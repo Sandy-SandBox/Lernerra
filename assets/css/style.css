@@ -517,6 +517,11 @@ p {
   color: hsl(199deg, 18%, 23%);
   transition: all 300ms;
 }
+@media (min-width:62rem) {
+    .nav__link {
+        font-size: 1.6rem;
+    }
+}
 .nav__link.active, .nav__link:hover {
   color: hsl(191.1deg, 57.5%, 40.2%);
   font-weight: 500;
