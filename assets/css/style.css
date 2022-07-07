@@ -1268,6 +1268,7 @@ p {
 }
 .form__input {
   width: 100%;
+  background-color: transparent;
   border: none;
   padding: 1.5rem 0;
   font-size: 1.6rem;
