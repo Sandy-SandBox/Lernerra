@@ -22,4 +22,4 @@ primary-font: Rubik;
 ## THIS WEBSITE IS MADE FOR THIS CODEFEST IF YOU WANNA USE IT IN YOUR PORTFOLIO FEEL FREE TO USE BUT DO GIVE ME CREDITS :)
 
 ### PLEASE PAY ATTENTION HERE ###/
-## I MADE THIS WEBSITE IN MY SMARTPHONE AS I DONT HAVE A PC AND YOU KNOW ITS QUITE HARD TO MAKE IT FULLY RESPONSIVE AS THERE IS NO WAY TO CHECK RESPONSIVENESS IN MOBILE PHONE BUT STILL I TRIED MY BEST TO MAKE IT RESPONSIVE AS MUCH AS I COULD...THANKS :)
+## I also wanna mention that i don't have a pc and i made this website in my smartphone so the layout might look a bit different in big screen sizes although i tried my best to make it responsive. I used TERMUX terminal to complile the SCSS code and treb edit to check its responsiveness.
