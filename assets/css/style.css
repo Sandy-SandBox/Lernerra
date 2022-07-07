@@ -1094,7 +1094,7 @@ p {
   .faqs {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    column-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 }
 
