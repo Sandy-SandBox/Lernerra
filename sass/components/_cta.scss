@@ -1,0 +1,45 @@
+/************************************/
+/* CTA */
+/************************************/
+@use "../abstracts" as *;
+
+.cta {
+  width: min(rem(1200), 95%);
+  padding: rem(40) 0;
+  padding-bottom: rem(40) !important;
+  margin: rem(50) auto;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba($clr-primary, 0.3);
+  background-image: linear-gradient(
+    120deg,
+    $clr-primary 60%,
+    $clr-tertiary 40%
+  );
+  @include breakpoint-big(medium) {
+    padding: rem(60) 0;
+  }
+  &__heading {
+    color: $clr-white;
+    margin-bottom: rem(10);
+  }
+  &__text {
+    color: darken($clr-white, 5);
+    max-width: rem(400);
+    margin: 0 auto;
+    margin-bottom: rem(30);
+    strong {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $clr-tertiary;
+    }
+  }
+  &__btns {
+    gap: rem(20);
+    @include breakpoint-big(medium) {
+      gap: rem(30);
+    }
+    @include breakpoint-low(small) {
+      flex-direction: column;
+    }
+  }
+}

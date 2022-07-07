@@ -1,0 +1,45 @@
+/************************************/
+/* BUTTONS */
+/************************************/
+@use "../abstracts" as *;
+.btn {
+  display: inline-block;
+  padding: 1.3rem 2.3rem;
+  font-size: $fs-s;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: $transition-fast;
+  &--small {
+    padding: 1rem 2rem;
+  }
+  &--secondary {
+    border: 2px solid $clr-primary;
+    color: $clr-primary;
+    &:active,
+    &:hover {
+      background-color: $clr-primary;
+      color: $clr-white;
+      box-shadow: inset 0 0 2px $clr-white;
+    }
+  }
+  &--white {
+    border: 2px solid $clr-white;
+    color: $clr-white;
+    &:active,
+    &:hover {
+      background-color: $clr-white;
+      color: $clr-primary;
+    }
+  }
+  &--black {
+    border: 2px solid $clr-primary;
+    background-color: $clr-primary;
+    color: $clr-white;
+    &:active,
+    &:hover {
+      background-color: transparent;
+      color: $clr-primary;
+    }
+  }
+}

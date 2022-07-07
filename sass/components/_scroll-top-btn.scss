@@ -1,0 +1,43 @@
+/************************************/
+/* SCROLL TO TOP BUTTON */
+/************************************/
+@use "../abstracts" as *;
+
+.scroll-top-btn {
+  @include flexCenter;
+  width: 4rem;
+  height: 4rem;
+  font-size: $fs-l;
+  background-color: $clr-tertiary;
+  color: $clr-white;
+  border-radius: 3px;
+  position: fixed;
+  right: rem(20);
+  bottom: rem(80);
+  transition: all $transition-fast;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  &:hover,
+  &:active {
+    background-color: $clr-tertiary-dark;
+  }
+  z-index: 999;
+  i {
+    animation: upDown 2s linear infinite;
+    animation-direction: alternate;
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(rem(-5));
+  }
+}

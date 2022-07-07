@@ -1,0 +1,108 @@
+/************************************/
+/* COURSE CARDS */
+/************************************/
+@use "../abstracts" as *;
+
+.courses-section {
+  background-color: $bg-primary;
+}
+.courses {
+  grid-gap: rem(40);
+  &__btn {
+    margin-top: rem(60);
+  }
+  @include breakpoint-big(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint-big(large) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(40);
+  }
+  @include breakpoint-big(huge) {
+    column-gap: 40;
+    row-gap: 50;
+  }
+}
+.course {
+  background-color: $clr-white;
+  overflow: hidden;
+  &__img {
+    height: rem(182);
+    width: 100%;
+  }
+  &__content {
+    padding: rem(25) rem(15);
+  }
+  &__lable {
+    display: inline-block;
+    padding: rem(5);
+    border-radius: 3px;
+    background-color: $clr-tertiary-light;
+    font-sie: $fs-xs;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $clr-white;
+    letter-spacing: 2px;
+    margin-bottom: rem(15);
+  }
+  &__name {
+    font-size: rem(20);
+    color: $clr-secondary;
+    margin-bottom: rem(20);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-box {
+      display: flex;
+      align-items: center;
+      gap: rem(5);
+      color: $clr-tertiary-dark;
+    }
+    &-icon {
+      font-size: $fs-m;
+    }
+    &-text {
+      font-size: $fs-m;
+    }
+  }
+  &__line {
+    display: block;
+    width: 100%;
+    height: rem(2);
+    background-color: $clr-secondary-lightest;
+    margin: rem(20) 0;
+    opacity: 0.3;
+  }
+  &__footer {
+    @extend .course__details;
+  }
+  &__rating {
+    gap: rem(5);
+    &-icon {
+      font-size: $fs-d;
+      color: $clr-tertiary-dark;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    width: rem(37);
+    height: rem(37);
+    background-color: $clr-primary;
+    color: darken($clr-white, 10);
+    font-size: $fs-l;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all $transition-fast;
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $clr-primary;
+      color: $clr-primary;
+    }
+  }
+}
