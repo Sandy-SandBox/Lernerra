@@ -820,6 +820,7 @@ p {
 }
 .service__description {
   color: hsl(0deg, 0%, 20%);
+  max-width: 90%;
 }
 
 /************************************/
