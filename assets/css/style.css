@@ -572,7 +572,7 @@ p {
 }
 @media (min-width:48em) {
     .hero {
-    row-gap:3rem;
+    row-gap:1rem;
     padding-top: 3rem;
     padding-bottom: 0;
     }
@@ -820,7 +820,7 @@ p {
 }
 .service__description {
   color: hsl(0deg, 0%, 20%);
-  max-width: 75%;
+  max-width: 85%;
 }
 
 /************************************/
@@ -849,7 +849,7 @@ p {
 }
 @media (min-width: 75em) {
   .courses {
-    column-gap: 5rem;
+    column-gap: 6rem;
     row-gap: 4rem;
   }
 }
@@ -1094,6 +1094,7 @@ p {
   .faqs {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    column-gap: 3.5rem;
   }
 }
 
