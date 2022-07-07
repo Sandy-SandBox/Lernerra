@@ -566,7 +566,9 @@ p {
   }
 }
 @media (min-width:48em) {
+    .hero {
     grid-column-gap:3rem;
+    }
 }
 .hero__content {
   opacity: 0;
