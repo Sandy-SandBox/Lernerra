@@ -820,9 +820,10 @@ p {
 }
 .service__description {
   color: hsl(0deg, 0%, 20%);
-  max-width: 85%;
 }
-
+@media (min-width:62em) {
+    max-width: 85%;
+}
 /************************************/
 /* COURSE CARDS */
 /************************************/
