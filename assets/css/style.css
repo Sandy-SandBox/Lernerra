@@ -1590,7 +1590,7 @@ p {
     left: 0;
     height: 2px;
     width: 0%;
-    background-color: hsl(191.1deg, 57.5%, 70.2%);
+    background-color: hsl(191.1deg, 57.5%, 40.2%);
 }
 @media (min-width:62em) {
     .indicator {
