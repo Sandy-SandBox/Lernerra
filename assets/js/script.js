@@ -13,6 +13,7 @@ const newsletter = document.querySelector(".popup-wrapper");
 const popupCloseBtnOne = document.querySelector(".popup__icon");
 const popupCloseBtnTwo = document.querySelector(".popup__close-text");
 const preloader = document.querySelector(".preloader");
+const scrollIndicator = document.querySelector('.indicator');
 logoImg.src = "assets/images/logo-white.svg";
 /****** onScroll Function ******/
 const onScroll = function (e) {
@@ -102,3 +103,17 @@ const hidePreloader = function () {
   hero.classList.add("active");
 };
 window.addEventListener("load", hidePreloader);
+
+
+////// Scroll Indicator //////
+let maxHeight = window.document.body
+.scrollHeight - window.innerHeight;
+window.addEventListener('scroll', moveScrollIndicator);
+
+function moveScrollIndicator(e) {
+
+  const percentage = ((window.scrollY) / maxHeight) * 100;
+
+  scrollIndicator.style.width = percentage + '%';
+
+}
