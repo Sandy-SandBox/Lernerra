@@ -1592,5 +1592,9 @@ p {
     width: 0%;
     background-color: hsl(191.1deg, 57.5%, 70.2%);
 }
-
+@media (min-width:62em) {
+    .indicator {
+        height: 3px;
+    }
+}
 /*# sourceMappingURL=style.css.map */
