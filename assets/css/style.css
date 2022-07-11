@@ -625,7 +625,7 @@ p {
 }
 @media (min-width:62em) {
     .enrolled{
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
 }
 .enrolled__wrapper:not(:first-child) {
