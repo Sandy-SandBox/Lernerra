@@ -624,7 +624,7 @@ p {
   border: 2px solid hsl(30deg, 16%, 90%);
 }
 @media (min-width:62em) {
-    .enrolled__wrapper {
+    .enrolled{
         margin-top: 3rem;
     }
 }
