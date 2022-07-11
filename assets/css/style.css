@@ -623,6 +623,11 @@ p {
   overflow: hidden;
   border: 2px solid hsl(30deg, 16%, 90%);
 }
+@media (min-width:62em) {
+    .enrolled__wrapper {
+        margin-top: 3rem;
+    }
+}
 .enrolled__wrapper:not(:first-child) {
   margin-left: -1rem;
 }
